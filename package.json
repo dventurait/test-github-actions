@@ -7,17 +7,19 @@
           "test": "test"
      },
      "scripts": {
-          "test": "mocha -timeout 10000",
+          "test": "mocha -timeout 10000 --exit",
+          "test-nyc": "nyc npm test && nyc report --reporter=text-lcov",
           "start": "node server.js"
      },
      "author": "Daniela Ventura",
      "license": "ISC",
      "devDependencies": {
-          "chai": "^4.3.4",
-          "chai-http": "^4.3.0",
-          "mocha": "^9.1.2"
+            "chai": "^4.3.4",
+            "chai-http": "^4.3.0",
+            "mocha": "^9.1.2",
+            "nyc": "^15.1.0"
      },
      "dependencies": {
-          "express": "^4.17.1"
+            "express": "^4.17.1"
      }
 }
